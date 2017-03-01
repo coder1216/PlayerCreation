@@ -96,6 +96,26 @@ GameObject:
   m_PrefabParentObject: {fileID: 1823634196639088, guid: 21785c91d1e764cdcac16a19f391c684,
     type: 2}
   m_PrefabInternal: {fileID: 1190183244}
+--- !u!114 &694080376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 694080375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e24864ecf3974479841839d6495d7e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingRight: 1
+  jump: 0
+  moveForce: 365
+  maxSpeed: 4000
+  jumpClips: []
+  jumpForce: 3000
+  maxExtraJumpTime: 0
+  extraJumpForce: 0
+  delayToExtraJumpForce: 0
 --- !u!50 &694080379
 Rigidbody2D:
   serializedVersion: 4
@@ -156,7 +176,7 @@ GameObject:
   - component: {fileID: 1123397077}
   m_Layer: 0
   m_Name: env_Bank
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,8 +237,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1123397076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81, y: 743, z: 0}
-  m_LocalScale: {x: 200, y: 24.827538, z: 1}
+  m_LocalPosition: {x: 63, y: 964, z: 0}
+  m_LocalScale: {x: 200, y: 18.160952, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -232,11 +252,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4711340288434504, guid: 21785c91d1e764cdcac16a19f391c684, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4711340288434504, guid: 21785c91d1e764cdcac16a19f391c684, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1082.1
+      value: 1144
       objectReference: {fileID: 0}
     - target: {fileID: 4711340288434504, guid: 21785c91d1e764cdcac16a19f391c684, type: 2}
       propertyPath: m_LocalPosition.z
@@ -279,6 +299,10 @@ Prefab:
         type: 2}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823634196639088, guid: 21785c91d1e764cdcac16a19f391c684, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21785c91d1e764cdcac16a19f391c684, type: 2}

@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
 
 
 	public float moveForce = 365f;			// Amount of force added to move the player left and right.
-	public float maxSpeed = 5f;				// The fastest the player can travel in the x axis.
+	public float maxSpeed = 5000f;				// The fastest the player can travel in the x axis.
 	public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
 	public float jumpForce = 1000f;			// Amount of force added when the player jumps.
 
@@ -39,6 +39,8 @@ public class PlayerControl : MonoBehaviour
 		groundCheck1 = transform.Find("groundCheck1");
 		groundCheck2 = transform.Find("groundCheck2");
 		rigidbody2d = GetComponent<Rigidbody2D> ();
+		animator = GetComponent<Animator> ();
+
 	}
 
 
@@ -59,27 +61,31 @@ public class PlayerControl : MonoBehaviour
 		//if (jumpButtonDown || Time.time - jumpTimer > maxExtraJumpTime) {
 		//	jumping = false;
 		//	}
-
+		if(Input.GetButtonDown("Jump") && grounded){
+			jump = true;
+		}
 	}
 
 	public void moveCharacterRight(){
 		move = true;
 		if (!facingRight)
-			animator.SetInteger ("AnimationState", 1);
 			Flip ();
+//			
+			
 		
 	}
 
 	public void moveCharacterLeft(){
 		move = true;
 		if (facingRight)
-			animator.SetInteger ("AnimationState", 1);
 			Flip ();
+//			
+
 	}
 
 	public void stopCharacter(){
 		move = false;
-		animator.SetInteger ("AnimationState", 2);
+//		animator.SetInteger ("AnimationState", 2);
 	}
 
 	public void jbuttonClick(){
@@ -95,11 +101,21 @@ public class PlayerControl : MonoBehaviour
 		// cache the crouch input wen
 		//float c = Input.GetAxis("Crouch");
 
-		if (move && facingRight || h > 0)
+		if (move && facingRight || h > 0) {
+			if (!facingRight) Flip();
 			rigidbody2d.velocity = new Vector2 (Vector2.right.x * maxSpeed * Time.deltaTime, rigidbody2d.velocity.y);
-		else if (move && !facingRight || h < 0)
+
+			animator.SetInteger ("AnimationState", 1);
+		} else if (move && !facingRight || h < 0) {
+			if (facingRight) Flip();
 			rigidbody2d.velocity = new Vector2 (-Vector2.right.x * maxSpeed * Time.deltaTime, rigidbody2d.velocity.y);
 
+			animator.SetInteger ("AnimationState", 1);
+		} else if(!move || h == 0){
+			rigidbody2d.velocity = new Vector2 (0, rigidbody2d.velocity.y);
+			animator.SetInteger ("AnimationState", 2);
+
+		}
 
 		// If the player should jump...
 		if(jump)
@@ -109,6 +125,12 @@ public class PlayerControl : MonoBehaviour
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			jump = false;
 		}
+
+		if (Input.GetButtonDown ("Fire1")) {
+			animator.SetInteger ("AnimationState", 5);
+//			if(facingRight)
+		}
+
 
 		//If our player is holding the jump button and a little bit of time has passed...
 		//		if (jumping && Time.time - jumpTimer > delayToExtraJumpForce){
@@ -129,6 +151,7 @@ public class PlayerControl : MonoBehaviour
 
 
 //	public void death(){
+//	animator.SetInteger ("AnimationState", 3);
 //		gameController.RebornPlayer ();
 //	}
 }

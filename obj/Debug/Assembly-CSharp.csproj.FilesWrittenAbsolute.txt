@@ -40,3 +40,24 @@
 /Users/alexhong/Desktop/CS 526/PlayerCreation/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/alexhong/Desktop/CS 526/PlayerCreation/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/alexhong/Desktop/CS 526/PlayerCreation/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/obj/Debug/Assembly-CSharp.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/UnityEngine.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/UnityEditor.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Mono.Cecil.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Unity.DataContract.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/alexhong/Desktop/CS526/PlayerCreation1/Temp/bin/Debug/Mono.Cecil.Mdb.dll
